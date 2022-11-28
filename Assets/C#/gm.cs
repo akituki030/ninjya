@@ -26,7 +26,6 @@ public class gm : MonoBehaviour
         {
             delta = 0;
             int px = Random.Range(-6, 7);
-
             Instantiate(arrow, new Vector3(px, 7, 0), Quaternion.identity);
         }
     }
