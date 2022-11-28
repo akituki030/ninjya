@@ -13,13 +13,16 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow)) 
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) 
         {
-            transform.Translate(-3, 0, 0);
+            transform.Translate(-1, 0, 0);
+            GetComponent<AudioSource>().Play();
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Translate(3, 0, 0);
+            transform.Translate(1, 0, 0);
+            GetComponent<AudioSource>().Play();
         }
+
     }
 }
