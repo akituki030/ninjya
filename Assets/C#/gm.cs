@@ -11,6 +11,7 @@ public class gm : MonoBehaviour
     public GameObject hpGauge;
     public Text scort;
     int socc;
+    int debuff;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +34,16 @@ public class gm : MonoBehaviour
     public void DecreaseHp()
     {
         hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
+        
+        
     }
     public void scorttext() 
     {
+        
         socc += 100;
         scort.text = $"¤À¼Æ¡G{socc}";
+        
+        
 
     }
 }

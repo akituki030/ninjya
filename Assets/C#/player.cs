@@ -20,17 +20,20 @@ public class player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow)) 
         {
             transform.Translate(-1, 0, 0);
-            GetComponent<AudioSource>().Play();
+            this.GetComponent<AudioSource>().clip = Cute_Walk;
+            this.GetComponent<AudioSource>().Play();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.Translate(1, 0, 0);
-            GetComponent<AudioSource>().Play();
+            this.GetComponent<AudioSource>().clip = Cute_Walk;
+            this.GetComponent<AudioSource>().Play();
         }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gm.GetComponent<gm>().DecreaseHp();
+        this.GetComponent<AudioSource>().clip = Hurt;
+        this.GetComponent<AudioSource>().Play();
     }
 }
