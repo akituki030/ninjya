@@ -34,16 +34,15 @@ public class gm : MonoBehaviour
     public void DecreaseHp()
     {
         hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
-        
+        socc -= 100;
+        scort.text = $"分數：{socc}";
         
     }
     public void scorttext() 
     {
-        
+
         socc += 100;
         scort.text = $"分數：{socc}";
-        
-        
-
     }
+    
 }

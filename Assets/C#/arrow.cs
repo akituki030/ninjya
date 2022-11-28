@@ -22,9 +22,11 @@ public class arrow : MonoBehaviour
             gm.GetComponent<gm>().scorttext();
             isscorttext = true;
         }
+        
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
+        gm.GetComponent<gm>().DecreaseHp();
     }
 }
