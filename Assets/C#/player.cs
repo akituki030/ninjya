@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour
+    
 {
+    public AudioClip Cute_Walk;
+    public AudioClip Hurt;
+    public GameObject gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +28,9 @@ public class player : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gm.GetComponent<gm>().DecreaseHp();
     }
 }
