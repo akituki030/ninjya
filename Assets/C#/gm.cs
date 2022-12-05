@@ -22,19 +22,12 @@ public class gm : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-        
-
-    }
+    void Update(){}
     void rog()
     {
         int px = Random.Range(-6, 7);
         Instantiate(arrow, new Vector3(px, 7, 0), Quaternion.identity);
     }
-
-
     void cat()
     {
         int px = Random.Range(-6, 7);
