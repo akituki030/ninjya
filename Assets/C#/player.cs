@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour
-    
+
 {
     public AudioClip Cute_Walk;
     public AudioClip Hurt;
     public GameObject gm;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GameObject.Find("GameObject");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) 
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.Translate(-1, 0, 0);
             this.GetComponent<AudioSource>().clip = Cute_Walk;
@@ -35,5 +36,27 @@ public class player : MonoBehaviour
     {
         this.GetComponent<AudioSource>().clip = Hurt;
         this.GetComponent<AudioSource>().Play();
+        //Destroy(gameObject);
+        if (collision.tag == "arrow")
+        {
+            gm.GetComponent<gm>().DecreaseHp();
+        }
+        else if (collision.tag == "catfood")
+        {
+            gm.GetComponent<gm>().uphp();
+        }
+
     }
+    /*public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+        if (collision.tag == "arrow")
+        {
+            gm.GetComponent<gm>().DecreaseHp();
+        }
+        else if (collision.tag == "catfood")
+        {
+            gm.GetComponent<gm>().uphp();
+        }
+    }*/
 }
