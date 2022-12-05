@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class food : MonoBehaviour
 {
-    public GameObject gm;
+    
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.Find("GameObject");
+        
         Destroy(gameObject, 3);
     }
 
@@ -16,5 +16,9 @@ public class food : MonoBehaviour
     void Update()
     {
         
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
     }
 }

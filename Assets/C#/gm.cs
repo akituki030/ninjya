@@ -24,13 +24,7 @@ public class gm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*delta += Time.deltaTime;
-        if (delta > span) 
-        {
-            delta = 0;
-            
-            Instantiate(arrow, new Vector3(px, 7, 0), Quaternion.identity);
-        }*/
+        
         
 
     }
