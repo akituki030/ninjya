@@ -16,19 +16,32 @@ public class gm : MonoBehaviour
     void Start()
     {
         scort.text = $"¤À¼Æ¡G{socc}";
+        InvokeRepeating("rog", 0, 1.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        delta += Time.deltaTime;
+        /*delta += Time.deltaTime;
         if (delta > span) 
         {
             delta = 0;
-            int px = Random.Range(-6, 7);
+            
             Instantiate(arrow, new Vector3(px, 7, 0), Quaternion.identity);
-        }
+        }*/
+        
+
     }
+    void rog()
+    {
+        int px = Random.Range(-6, 7);
+        Instantiate(arrow, new Vector3(px, 7, 0), Quaternion.identity);
+    }
+    
+    
+    
+    
+    
     public void DecreaseHp()
     {
         hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
