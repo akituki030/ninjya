@@ -24,17 +24,5 @@ public class arrow : MonoBehaviour
         }
         
     }
-    /*public void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-        if (collision.tag == "arrow")
-        {
-            gm.GetComponent<gm>().DecreaseHp();
-        }
-        else if (collision.tag == "catfood")
-        { 
-        gm.GetComponent<gm>().uphp();
-        }
-
-    }*/
+    
 }

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class gm : MonoBehaviour
 {
     public GameObject arrow;
-    float span = 1.0f;
-    float delta = 0;
+    //float span = 1.0f;
+    //float delta = 0;
     public GameObject hpGauge;
     public GameObject catfood;
     public Text scort;
